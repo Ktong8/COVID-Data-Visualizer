@@ -11,9 +11,9 @@ function App() {
       <div className="App">
         <Nav />
         <Switch>
-          <Route path="/" exact component = {Home} />
-          <Route path="/tables" exact component={Tables}/>
-          <Route path="/graphs" exact component={Graphs}/>
+          <Route path="/covid-data-visualizer/" exact component = {Home} />
+          <Route path="/covid-data-visualizer/tables" exact component={Tables}/>
+          <Route path="/covid-data-visualizer/graphs" exact component={Graphs}/>
         </Switch>
       </div>
     </Router>
