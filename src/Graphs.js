@@ -76,27 +76,26 @@ class Graphs extends React.Component{
     render(){
        const options = {
         title: {
-            text: {this.state.global?"Global":this.state.countries.Countries[this.state.index].Country}
+            text: this.state.global?"Global":this.state.countries.Countries[this.state.index].Country
         },
         data: [{				
                 type: "column",
                 dataPoints: [
-                    { label: "New Confirmed Cases",  y: {this.state.global?this.state.countries.Global.NewConfirmed:this.state.countries.Countries[this.state.index].NewConfirmed}  },
-                    { label: "New Deaths", y: {this.state.global?this.state.countries.Global.NewDeaths:this.state.countries.Countries[this.state.index].NewDeaths} },
-                    { label: "New Recovered", y: {this.state.global?this.state.countries.Global.NewRecovered:this.state.countries.Countries[this.state.index].NewRecovered}  }
+                    { label: "New Confirmed Cases",  y: this.state.global?this.state.countries.Global.NewConfirmed:this.state.countries.Countries[this.state.index].NewConfirmed  },
+                    { label: "New Deaths", y: this.state.global?this.state.countries.Global.NewDeaths:this.state.countries.Countries[this.state.index].NewDeaths },
+                    { label: "New Recovered", y: this.state.global?this.state.countries.Global.NewRecovered:this.state.countries.Countries[this.state.index].NewRecovered  }
 
                 ]
               }]
         }
         return(
-
+        <div>
             <div className = "graphs-container">
                 <h1>Graphs</h1>
-                <div className = "canva"></div>
             </div>
                 <label>Please Select a Country to view data for:  </label>
                 <select name = "countries" id = "countries" onChange = {this.handleChange} className = "selectpicker">
-                    <option value = "na" selected = {this.state.current ==='na'?"selected":""}>Select a Country             </option>
+                    <option value = "na" selected = {this.state.current ==='na'?"selected":""}>Select a Country</option>
                     <option value = "global" selected = {this.state.current === 'global'?"selected":""}>Global</option>
                     {
                         this.state.countries.Countries.map((data)=>{
@@ -105,9 +104,9 @@ class Graphs extends React.Component{
                     }
                 </select>
                 <div>
-                <CanvasJSChart options = {options}
-
+                {this.state.current!=='na'?<CanvasJSChart options = {options}/>:""}
              </div>
+        </div>
         )
     }
 }
