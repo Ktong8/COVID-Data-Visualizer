@@ -3,7 +3,8 @@ import Tables from './Tables.js'
 import Graphs from './Graphs.js'
 import Nav from './Nav.js';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Switch, Route} from 'react-router-dom'
+import {HashRouter as Router} from 'react-router-dom'
 
 function App() {
   return (
@@ -11,9 +12,9 @@ function App() {
       <div className="App">
         <Nav />
         <Switch>
-          <Route path={process.env.PUBLIC_URL + "/"} exact component = {Home} />
-          <Route path={process.env.PUBLIC_URL + "/tables"} exact component={Tables}/>
-          <Route path={process.env.PUBLIC_URL + "/graphs"} exact component={Graphs}/>
+          <Route path={"/"} exact component = {Home} />
+          <Route path={"/tables"} exact component={Tables}/>
+          <Route path={"/graphs"} exact component={Graphs}/>
         </Switch>
       </div>
     </Router>
@@ -33,11 +34,11 @@ const Home = ()=> (
     <br/>
     <p className = "home-paragraph">As we continue to struggle through this pandemic, keep yourself updated on the most recent statistics 📈! 
     To get started, click on either the Tables tab or the Graphs tab to view recent data. </p>
-    <form action="/covid-data-visualizer/tables">
+    <form action="/tables">
       <input className = "home-button" type = "submit" value = "Tables"/>
     </form>
     <br/>
-    <form action="/covid-data-visualizer/graphs">
+    <form action="/graphs">
       <input className = "home-button" type = "submit" value = "Graphs"/>
     </form>
     <br/>
