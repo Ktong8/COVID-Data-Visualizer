@@ -13,8 +13,8 @@ class Nav extends React.Component{
                     <div className="collapse navbar-collapse" id="navbarToggle">
                         <div className="navbar-nav mr-auto">
                         <a className="nav-item nav-link" href="/">Home</a>
-                        <a className="nav-item nav-link" href="/tables">Tables</a>
-                        <a className="nav-item nav-link" href="/graphs">Graphs</a>
+                        <a className="nav-item nav-link" href="/covid-data-visualizer/tables">Tables</a>
+                        <a className="nav-item nav-link" href="/dovid-data-visualizer/graphs">Graphs</a>
                         </div>
                     </div>
                     </div>
