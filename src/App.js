@@ -11,9 +11,9 @@ function App() {
       <div className="App">
         <Nav />
         <Switch>
-          <Route path="/covid-data-visualizer/" exact component = {Home} />
-          <Route path="/covid-data-visualizer/tables" exact component={Tables}/>
-          <Route path="/covid-data-visualizer/graphs" exact component={Graphs}/>
+          <Route path={process.env.PUBLIC_URL + "/"} exact component = {Home} />
+          <Route path={process.env.PUBLIC_URL + "/tables"} exact component={Tables}/>
+          <Route path={process.env.PUBLIC_URL + "/graphs"} exact component={Graphs}/>
         </Switch>
       </div>
     </Router>

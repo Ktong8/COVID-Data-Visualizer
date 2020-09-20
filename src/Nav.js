@@ -6,7 +6,7 @@ class Nav extends React.Component{
             <header className="site-header">
                 <nav className="navbar navbar-expand-md navbar-light bg-light fixed-top">
                     <div className="container">
-                    <a className="navbar-brand mr-4" href="/">COVID Data Visualizer</a>
+                    <a className="navbar-brand mr-4" href="/covid-data-visualizer/">COVID Data Visualizer</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
