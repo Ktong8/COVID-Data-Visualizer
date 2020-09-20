@@ -33,11 +33,11 @@ const Home = ()=> (
     <br/>
     <p className = "home-paragraph">As we continue to struggle through this pandemic, keep yourself updated on the most recent statistics 📈! 
     To get started, click on either the Tables tab or the Graphs tab to view recent data. </p>
-    <form action="/tables">
+    <form action="/covid-data-visualizer/tables">
       <input className = "home-button" type = "submit" value = "Tables"/>
     </form>
     <br/>
-    <form action="/graphs">
+    <form action="/covid-data-visualizer/graphs">
       <input className = "home-button" type = "submit" value = "Graphs"/>
     </form>
     <br/>
